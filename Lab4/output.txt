@@ -1,0 +1,348 @@
+working dir: /u/course/ece244i/public//4
+
+#############################################################
+#############################################################
+Running Testcase 1
+#############################################################
+#############################################################
+
+Running the following input on your program:
+=============================================================
+multiple
+register open 101 1 3 0
+customer 5 110
+customer 15 2
+customer 2 3
+customer 17 5
+customer 30 2
+register open 102 2 2 1
+customer 11 1
+customer 32 2
+register open 103 1.5 3 5
+customer 47 3
+customer 7 2
+customer 10 3
+customer 52 15
+customer 15 22
+customer 20 110
+register close 101 25
+register close 102 27
+register close 103 0
+/tmp/MLFn50XXxL/main.tabackad < ./1 > /tmp/MLFn50XXxL/tabackad.out1 2> /tmp/MLFn50XXxL/tabackad.err1
+-------------------------------------------------------------
+
+Your program produced the following output:
+=============================================================
+Welcome to ECE 244 Grocery Store Queue Simulation!
+Enter "single" if you want to simulate a single queue or "multiple" to simulate multiple queues: 
+> Simulating multiple queues ...
+> Opened register 101
+> A customer entered
+Queued a customer with quickest register 101
+> A customer entered
+Queued a customer with quickest register 101
+> A customer entered
+Queued a customer with quickest register 101
+> Departed a customer at register ID 101 at 118
+A customer entered
+Queued a customer with quickest register 101
+> A customer entered
+Queued a customer with quickest register 101
+> Opened register 102
+> A customer entered
+Queued a customer with quickest register 102
+> A customer entered
+Queued a customer with quickest register 102
+> Opened register 103
+> A customer entered
+Queued a customer with quickest register 103
+> Departed a customer at register ID 101 at 136
+A customer entered
+Queued a customer with quickest register 102
+> A customer entered
+Queued a customer with quickest register 103
+> Departed a customer at register ID 101 at 141
+Departed a customer at register ID 102 at 148
+A customer entered
+Queued a customer with quickest register 102
+> Departed a customer at register ID 101 at 161
+A customer entered
+Queued a customer with quickest register 101
+> Departed a customer at register ID 101 at 194
+Departed a customer at register ID 103 at 207.5
+Departed a customer at register ID 101 at 212
+Departed a customer at register ID 102 at 214
+Departed a customer at register ID 103 at 225.5
+Departed a customer at register ID 102 at 230
+A customer entered
+Queued a customer with quickest register 101
+> Departed a customer at register ID 101 at 309
+Closed register 101
+> Departed a customer at register ID 102 at 336
+Closed register 102
+> Closed register 103
+> 
+Finished at time 338
+Statistics:
+	Maximum wait time: 182
+	Average wait time: 59.8462
+	Standard Deviation of wait time: 45.2431
+
+-------------------------------------------------------------
+
+<<<<<<<<< Comparing output to solution >>>>>>>>>>>>
+
+Running valgrind to check for memory leaks
+
+############### Testcase 1 Results ##########################
+Functionality: PASS - Output matches solution
+Valgrind:      PASS - No memory leaks detected
+
+#############################################################
+#############################################################
+Running Testcase 2
+#############################################################
+#############################################################
+
+Running the following input on your program:
+=============================================================
+single
+register open 101 1 3 0
+customer 5 110
+customer 15 2 
+customer 2 3
+customer 17 5
+customer 30 2
+register open 102 2 2 1
+customer 11 1
+customer 32 2 
+register open 103 1.5 3 5
+customer 47 3
+customer 7 2 
+customer 10 3
+customer 52 15
+customer 15 22
+customer 20 110
+register close 101 25 
+register close 102 0
+register close 103 0 
+/tmp/MLFn50XXxL/main.tabackad < ./2 > /tmp/MLFn50XXxL/tabackad.out2 2> /tmp/MLFn50XXxL/tabackad.err2
+-------------------------------------------------------------
+
+Your program produced the following output:
+=============================================================
+Welcome to ECE 244 Grocery Store Queue Simulation!
+Enter "single" if you want to simulate a single queue or "multiple" to simulate multiple queues: 
+> Simulating a single queue ...
+> Opened register 101
+> A customer entered
+Queued a customer with free register 101
+> A customer entered
+No free registers
+> A customer entered
+No free registers
+> Departed a customer at register ID 101 at 118
+Queued a customer with free register 101
+A customer entered
+No free registers
+> A customer entered
+No free registers
+> Opened register 102
+Queued a customer with free register 102
+> A customer entered
+No free registers
+> A customer entered
+No free registers
+> Departed a customer at register ID 102 at 129
+Queued a customer with free register 102
+Opened register 103
+Queued a customer with free register 103
+> A customer entered
+No free registers
+> Departed a customer at register ID 101 at 136
+Queued a customer with free register 101
+A customer entered
+No free registers
+> A customer entered
+No free registers
+> Departed a customer at register ID 101 at 150
+Queued a customer with free register 101
+A customer entered
+No free registers
+> Departed a customer at register ID 102 at 165
+Queued a customer with free register 102
+A customer entered
+No free registers
+> Departed a customer at register ID 103 at 179
+Queued a customer with free register 103
+Departed a customer at register ID 101 at 185
+Queued a customer with free register 101
+Departed a customer at register ID 103 at 192.5
+Queued a customer with free register 103
+Departed a customer at register ID 101 at 198
+Queued a customer with free register 101
+Departed a customer at register ID 101 at 216
+Departed a customer at register ID 102 at 261
+Departed a customer at register ID 103 at 273.5
+A customer entered
+Queued a customer with free register 101
+> Departed a customer at register ID 101 at 309
+Closed register 101
+> Closed register 102
+> Closed register 103
+> 
+Finished at time 311
+Statistics:
+	Maximum wait time: 127
+	Average wait time: 50.6154
+	Standard Deviation of wait time: 35.2721
+
+-------------------------------------------------------------
+
+<<<<<<<<< Comparing output to solution >>>>>>>>>>>>
+
+Running valgrind to check for memory leaks
+
+############### Testcase 2 Results ##########################
+Functionality: PASS - Output matches solution
+Valgrind:      PASS - No memory leaks detected
+
+#############################################################
+#############################################################
+Running Testcase 3
+#############################################################
+#############################################################
+
+Running the following input on your program:
+=============================================================
+single
+register open 101 1 3 0
+customer 5 110
+custom 15 2
+customer 15
+customer 15 2
+register open 102 2 2 1 0
+register open 102 2 2 1
+register open 102 2 2 1
+customer 47 5
+register close 101 50
+register close 103 0
+register close 102 0
+/tmp/MLFn50XXxL/main.tabackad < ./3 > /tmp/MLFn50XXxL/tabackad.out3 2> /tmp/MLFn50XXxL/tabackad.err3
+-------------------------------------------------------------
+
+Your program produced the following output:
+=============================================================
+Welcome to ECE 244 Grocery Store Queue Simulation!
+Enter "single" if you want to simulate a single queue or "multiple" to simulate multiple queues: 
+> Simulating a single queue ...
+> Opened register 101
+> A customer entered
+Queued a customer with free register 101
+> Invalid operation
+> Error: too few arguments.
+> A customer entered
+No free registers
+> Error: too many arguments
+> Opened register 102
+Queued a customer with free register 102
+> Error: register 102 is already open
+> Departed a customer at register ID 101 at 118
+A customer entered
+Queued a customer with free register 101
+> Departed a customer at register ID 102 at 145
+Departed a customer at register ID 101 at 168
+Closed register 101
+> Error: register 103 is not open
+> Closed register 102
+> 
+Finished at time 168
+Statistics:
+	Maximum wait time: 50
+	Average wait time: 30.3333
+	Standard Deviation of wait time: 17.2498
+
+-------------------------------------------------------------
+
+<<<<<<<<< Comparing output to solution >>>>>>>>>>>>
+
+Running valgrind to check for memory leaks
+
+############### Testcase 3 Results ##########################
+Functionality: PASS - Output matches solution
+Valgrind:      PASS - No memory leaks detected
+
+#############################################################
+#############################################################
+Running Testcase 4
+#############################################################
+#############################################################
+
+Running the following input on your program:
+=============================================================
+single
+register open 1010 3 3 0
+customer 3 3
+customer 7 2
+customer 23 1
+customer 15 4
+customer 2 8
+register close 1010 150
+/tmp/MLFn50XXxL/main.tabackad < ./4 > /tmp/MLFn50XXxL/tabackad.out4 2> /tmp/MLFn50XXxL/tabackad.err4
+-------------------------------------------------------------
+
+Your program produced the following output:
+=============================================================
+Welcome to ECE 244 Grocery Store Queue Simulation!
+Enter "single" if you want to simulate a single queue or "multiple" to simulate multiple queues: 
+> Simulating a single queue ...
+> Opened register 1010
+> A customer entered
+Queued a customer with free register 1010
+> A customer entered
+No free registers
+> A customer entered
+No free registers
+> A customer entered
+No free registers
+> Departed a customer at register ID 1010 at 15
+Queued a customer with free register 1010
+A customer entered
+No free registers
+> Departed a customer at register ID 1010 at 39
+Queued a customer with free register 1010
+Departed a customer at register ID 1010 at 111
+Queued a customer with free register 1010
+Departed a customer at register ID 1010 at 159
+Queued a customer with free register 1010
+Departed a customer at register ID 1010 at 168
+Closed register 1010
+> 
+Finished at time 168
+Statistics:
+	Maximum wait time: 150
+	Average wait time: 90
+	Standard Deviation of wait time: 57.4909
+
+-------------------------------------------------------------
+
+<<<<<<<<< Comparing output to solution >>>>>>>>>>>>
+
+Running valgrind to check for memory leaks
+
+############### Testcase 4 Results ##########################
+Functionality: PASS - Output matches solution
+Valgrind:      PASS - No memory leaks detected
+
+
+#############################################################
+################# Summary for 4 test(s) #####################
+#############################################################
+
+Functionality: PASS: All tests passed
+Valgrind:      PASS: No memory leaks detected
+
+#############################################################
+#############################################################
+#############################################################
+

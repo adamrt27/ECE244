@@ -1,0 +1,21 @@
+multiple
+register open 1 2 3 4
+register open 2 3 4 5
+register open 3 4 5 6
+register open 4 5 6 7
+customer 1 2
+customer 2 3
+customer 3 4
+customer 5 6
+customer 6 7
+customer 7 9
+customer 15 15
+customer 12 12
+customer 100 15
+customer 1 1
+register close 1 100
+register close 2 100
+register close 3 100
+register close 4 100
+register close 5 100
+register close 6 100

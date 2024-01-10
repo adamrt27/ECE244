@@ -1,0 +1,7 @@
+maxShapes 2
+create s1 circle 1 1 1 1 
+create s3 rectangle 1 2 3 4 
+delete s1
+create s4 triangle 1 1 1  1
+create s5 circle 1 1 1 1
+draw all

@@ -1,0 +1,194 @@
+working dir: /u/course/ece244i/public//3
+
+#############################################################
+#############################################################
+Running Testcase 1
+#############################################################
+#############################################################
+
+Running the following input on your program:
+=============================================================
+maxShapes 20
+create circle1 ellipse 50 80 2 2
+move circle1 100 160
+draw circle1
+draw all
+delete circle1
+delete all
+/tmp/DxpBO9v9jg/parser.tabackad < ./1 > /tmp/DxpBO9v9jg/tabackad.out1 2> /tmp/DxpBO9v9jg/tabackad.err1
+-------------------------------------------------------------
+
+Your program produced the following output:
+=============================================================
+> New database: max shapes is 20
+> Created circle1: ellipse 50 80 2 2
+> Moved circle1 to 100 160
+> Drew circle1: ellipse 100 160 2 2
+> Drew all shapes circle1: ellipse 100 160 2 2 
+> Deleted shape circle1
+> Deleted: all shapes
+> 
+-------------------------------------------------------------
+
+<<<<<<<<< Comparing output to solution >>>>>>>>>>>>
+
+Running valgrind to check for memory leaks
+
+############### Testcase 1 Results ##########################
+Functionality: PASS - Output matches solution
+Valgrind:      PASS - No memory leaks detected
+
+#############################################################
+#############################################################
+Running Testcase 2
+#############################################################
+#############################################################
+
+Running the following input on your program:
+=============================================================
+maxShapes 100
+NotACommand
+create triangle1 triangle 4 five 2 2
+create triangle1 triangle 4 5 2 2
+create c1 circle 1 1 30 30
+move triangle1 -100 100
+create move ellipse 100 100 20 10
+create Ellipse ellipse 100 100 20 10
+draw triangle1 circle1
+draw
+/tmp/DxpBO9v9jg/parser.tabackad < ./2 > /tmp/DxpBO9v9jg/tabackad.out2 2> /tmp/DxpBO9v9jg/tabackad.err2
+-------------------------------------------------------------
+
+Your program produced the following output:
+=============================================================
+> New database: max shapes is 100
+> Error: invalid command
+> Error: invalid argument
+> Created triangle1: triangle 4 5 2 2
+> Created c1: circle 1 1 30 30
+> Error: invalid value
+> Error: invalid shape name
+> Created Ellipse: ellipse 100 100 20 10
+> Error: too many arguments
+> Error: too few arguments
+> 
+-------------------------------------------------------------
+
+<<<<<<<<< Comparing output to solution >>>>>>>>>>>>
+
+Running valgrind to check for memory leaks
+
+############### Testcase 2 Results ##########################
+Functionality: PASS - Output matches solution
+Valgrind:      PASS - No memory leaks detected
+
+#############################################################
+#############################################################
+Running Testcase 3
+#############################################################
+#############################################################
+
+Running the following input on your program:
+=============================================================
+maxShapes 10
+create s1 ellipse onehundred 1 2
+create s1 triangle -100 1 2 4
+create s1 rectangle one two five eight
+create s1 hexagon 100 1200 5 8
+create s1 ellipse 100 200 1 2 6
+create s1 ellipse 100 200
+create s1 rectangle 100 200 10 20
+rotate s1 -100
+rotate s1 362
+draw everything
+/tmp/DxpBO9v9jg/parser.tabackad < ./3 > /tmp/DxpBO9v9jg/tabackad.out3 2> /tmp/DxpBO9v9jg/tabackad.err3
+-------------------------------------------------------------
+
+Your program produced the following output:
+=============================================================
+> New database: max shapes is 10
+> Error: invalid argument
+> Error: invalid value
+> Error: invalid argument
+> Error: invalid shape type
+> Error: too many arguments
+> Error: too few arguments
+> Created s1: rectangle 100 200 10 20
+> Error: invalid value
+> Error: invalid value
+> Error: shape everything not found
+> 
+-------------------------------------------------------------
+
+<<<<<<<<< Comparing output to solution >>>>>>>>>>>>
+
+Running valgrind to check for memory leaks
+
+############### Testcase 3 Results ##########################
+Functionality: PASS - Output matches solution
+Valgrind:      PASS - No memory leaks detected
+
+#############################################################
+#############################################################
+Running Testcase 4
+#############################################################
+#############################################################
+
+Running the following input on your program:
+=============================================================
+maxShapes 10
+create s1 triangle 100 1 2 2 done
+create s1 triangle 100 1
+create s1 triangle 100
+create s1
+create
+move s1 100 200 300
+move s1
+move
+draw s1 done
+draw
+delete s1 done
+delete all done
+delete
+/tmp/DxpBO9v9jg/parser.tabackad < ./4 > /tmp/DxpBO9v9jg/tabackad.out4 2> /tmp/DxpBO9v9jg/tabackad.err4
+-------------------------------------------------------------
+
+Your program produced the following output:
+=============================================================
+> New database: max shapes is 10
+> Error: too many arguments
+> Error: too few arguments
+> Error: too few arguments
+> Error: too few arguments
+> Error: too few arguments
+> Error: shape s1 not found
+> Error: shape s1 not found
+> Error: too few arguments
+> Error: shape s1 not found
+> Error: too few arguments
+> Error: shape s1 not found
+> Error: too many arguments
+> Error: too few arguments
+> 
+-------------------------------------------------------------
+
+<<<<<<<<< Comparing output to solution >>>>>>>>>>>>
+
+Running valgrind to check for memory leaks
+
+############### Testcase 4 Results ##########################
+Functionality: PASS - Output matches solution
+Valgrind:      PASS - No memory leaks detected
+
+
+#############################################################
+################# Summary for 4 test(s) #####################
+#############################################################
+
+Functionality: PASS: All tests passed
+Valgrind:      PASS: No memory leaks detected
+
+#############################################################
+#############################################################
+#############################################################
+
